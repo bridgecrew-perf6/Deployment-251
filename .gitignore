@@ -11,5 +11,5 @@
 # -- Ignore Data Files
 # -- Ignore Build Files (.bin files)
 
-data/
-*.bin
+#data/
+#*.bin
