@@ -1,0 +1,14 @@
+Connecting to AWS
+ -Create Certificate and Activate Certificate
+ -Attach Policy to the Certificate
+ -Download Certificate-Convert to ssl (link in documentation)
+ -Place der files in data folder
+ -Upload Data files using ESP8266 Sketch Data Upload tool
+ -Upload the code and see the Serial logs
+ -Go to Amazon AWS IOT core Service
+ -Go to Test and subscribe to outTopic
+ -GO to Dynamodb -> Click on Tables  -> Select nodemcu_data -> Click on Items to see entry
+
+Requirement 
+    -ESP8266FS
+    -PubSubClient lib <https://www.arduinolibraries.info/libraries/pub-sub-client>

@@ -1,0 +1,15 @@
+#
+#
+# -- Copyright 2020-2021
+# -- Notice: Property of Innoweave Smart Solutions
+#    Any part of this code cannot be copied or 
+#    redistributed without written prior consent 
+#    of Innoweave
+# -- File Name: .gitignore
+# -- Author: Priyankar 
+# -- Date: July 27, 2021
+# -- Ignore Data Files
+# -- Ignore Build Files (.bin files)
+
+data/
+*.bin
