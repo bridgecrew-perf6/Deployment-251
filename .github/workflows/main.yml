@@ -46,7 +46,7 @@ jobs:
       - name: Upload README.md to Google Drive
         uses: Jodebu/upload-to-drive@v1
         with:
-          target: MATSYA_FW_Release_1.ino.bin
+          target: "MATSYA_FW_Release_1"
           credentials: ${{ secrets.ACTION }}
           folder: 1apDvCcHCbu8Jm_wD01uRN5SwbhpsC7v3
     
