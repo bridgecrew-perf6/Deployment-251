@@ -45,7 +45,8 @@ jobs:
         run: arduino-cli compile -b esp8266:esp8266:nodemcu ./MATSYA_FW_Release_1  --build-path MATSYA_FW\MATSYA_FW_Release_1
       - name: Creating timestamp folder
         run: | 
-           cp MATSYA_FW\MATSYA_FW_Release_1\MATSYA_FW_Release_1.ino.bin mkdir $(date +"%d-%m-%Y")
+           mkdir $(date +"%d-%m-%Y")
+           cp MATSYA_FW\MATSYA_FW_Release_1\MATSYA_FW_Release_1.ino.bin $(date +"%d-%m-%Y")
       - name: Upload README.md to Google Drive
         uses: Jodebu/upload-to-drive@v1
         with:
