@@ -83,16 +83,15 @@ jobs:
       - name: compilation of ino file
         run: arduino-cli compile -b esp8266:esp8266:nodemcu ./MATSYA_FW_Release_1  --build-path MATSYA_FW/MATSYA_FW_Release_1
       - name: Creating timestamp folder
-        env:
-          $TIME: $(date +%d-%m-%Y_%H-%M-%S)
+        
         run: | 
-          
+          "TIME::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
            tar -czvf $TIME.tar MATSYA_FW/MATSYA_FW_Release_1/MATSYA_FW_Release_1.ino.bin
       
       - name: Upload README.md to Google Drive
         uses: Jodebu/upload-to-drive@v1
         with:
-          target:  (date +%d-%m-%Y_%H-%M-%S).tar 
+          target:  $TIME.tar 
           credentials: ${{ secrets.DEPLOYE }}
           folder: 1apDvCcHCbu8Jm_wD01uRN5SwbhpsC7v3
    
