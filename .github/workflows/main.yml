@@ -86,13 +86,13 @@ jobs:
       - name: Creating timestamp folder  
         run: | 
            mkdir date
-           timestamp= echo $(date +"%d-%m-%Y")
+           timestamp= $(date +"%d-%m-%Y")
            tar -czvf date/$timestamp.tar MATSYA_FW/MATSYA_FW_Release_1/MATSYA_FW_Release_1.ino.bin
       
       - name: Upload README.md to Google Drive
         uses: Jodebu/upload-to-drive@v1
         with:
-          target: "./date/"
+          target: ./date/$timestamp.tar
           credentials: ${{ secrets.DEPLOYE }}
           folder: 1apDvCcHCbu8Jm_wD01uRN5SwbhpsC7v3
    
